@@ -19,3 +19,4 @@
 .projectile
 *.torrent
 main_test.go
+trumtorrent*
