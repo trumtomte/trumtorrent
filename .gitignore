@@ -18,3 +18,4 @@
 *.prof
 .projectile
 *.torrent
+main_test.go
