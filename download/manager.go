@@ -19,12 +19,12 @@ const ConnectionLimit int = 30
 type Manager struct {
 	torrent     *torrent.Torrent
 	progress    *progress.Progress
-	trackers    []tracker.Tracker
 	clients     map[string]*client.Client
 	peers       chan *peer.Peer
 	downloaded  chan *piece.Piece
-	connections int
 	connWait    chan struct{}
+	trackers    []tracker.Tracker
+	connections int
 }
 
 func (m *Manager) wait() {
