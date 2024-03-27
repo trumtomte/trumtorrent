@@ -29,16 +29,16 @@ const (
 
 // Client represents the connection towards one peer
 type Client struct {
-	State      state
-	conn       net.Conn
-	torrent    *torrent.Torrent
-	Peer       *peer.Peer
-	piece      *piece.Piece
-	choked     bool
-	interested bool
+	conn    net.Conn
+	torrent *torrent.Torrent
+	Peer    *peer.Peer
+	piece   *piece.Piece
 	// haveBuf is used to buffer received HAVE messages, so we can insert
 	// them into our bitfield later on when we've got a complete torrent
-	haveBuf []int
+	haveBuf    []int
+	State      state
+	choked     bool
+	interested bool
 }
 
 // BlockSize is the default size for requests (i.e. block length)

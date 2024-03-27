@@ -20,9 +20,9 @@ func (a Addr) String() string {
 
 // Peer is used in order to store information related to a Peer connection
 type Peer struct {
-	Addr      Addr
-	bitfield  bitfield.Bitfield
 	handshake handshake.Handshake
+	bitfield  bitfield.Bitfield
+	Addr      Addr
 	extension extension.Handshake
 }
 

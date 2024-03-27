@@ -18,9 +18,9 @@ type Destination struct {
 
 // Block represents one part of a `Piece`
 type Block struct {
+	Data  []byte
 	Index uint32
 	Begin uint32
-	Data  []byte
 }
 
 // Piece represents one (full) part of the torrent data

@@ -31,8 +31,8 @@ const (
 
 // Message represents a bittorrent message (either from or to a peer)
 type Message struct {
-	Id      Id
 	Payload []byte
+	Id      Id
 }
 
 // Bytes returns the serialized message as bytes
